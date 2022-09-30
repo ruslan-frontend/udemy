@@ -372,8 +372,8 @@ const array = ['a', 'b'];
 
 const newAarray = [...array];
 const q = {
-  one: 1,
-  two: 2
+	one: 1,
+	two: 2
 };
 
 const newObj = {...q};
@@ -391,11 +391,11 @@ console.log(typeof(strObj));
 console.dir([1,2,3]);
 
 const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function() {
+	health: 400,
+	armor: 100,
+	sayHello: function() {
     console.log('Hello!');
-  }
+	}
 };
 
 const jonh = Object.create(soldier);
@@ -442,12 +442,12 @@ console.log(typeof(parseInt('15px', 10)));
 /* 
 let switcher = null;
 if (switcher) {
-  console.log('Working..');
+	console.log('Working..');
 }
 
 switcher = 1;
 if (switcher) {
-  console.log('Working..');
+	console.log('Working..');
 }
 
 
@@ -605,42 +605,70 @@ div.insertAdjacentHTML('beforeend', '<h2>Hi</h2>');
 div.insertAdjacentHTML('afterend', '<h2>Hi</h2>'); 
 */
 
-
 //! 31 - События и их обработчики
 
-const btn1 = document.querySelector('.btn1');
+/* const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 
 
 let i = 0;
 const deleteElement = (e) => {
-  console.log(e.target);
-  i++;
-  if (i == 1) {
+	console.log(e.target);
+	i++;
+	if (i == 1) {
     btn2.removeEventListener('click', deleteElement);
-  }
+	}
 };
 
 
 btn1.addEventListener('click', () => {
-  alert('Click');
+	alert('Click');
 });
 
 btn2.addEventListener('click', deleteElement);
 
 
-  
 btn3.addEventListener('mouseenter', () => {
-  console.log('hover');
+	console.log('hover');
 });
-  
+   */
 
-//! 32 - Навигация по DOM
+//! 34 - События на мобильный устройствах
+
+// touchstart - касание пальца
+// touchmove - касание и движение пальца
+// touchend - касание и отрываение пальца
+// touchenter - касание при ведении по экрану, как только попал на кнопку
+// touchleave - когда палец ушел за пределы кнопки
+// touchcancel - когда палец вышел за пределы браузера
+/* 
+document.addEventListener("DOMContentLoaded", () => {
+	const box = document.querySelector('.box');
+
+	box.addEventListener('touchmove', (e) => {
+		e.preventDefault();
+	
+		console.log('Move');
+	});
+	
+	box.addEventListener('touchstart', (e) => {
+		e.preventDefault();
+	
+		console.log('Start');
+		console.log(e.touches);
+	});
+});
+ */
+// touches
 
 
+//! 35 - Async, defer, динамические скрипты
+
+// defer - никогда не блокируют страницу и продолжают загружать скрипт в фоновом режиме. Такой скрипт можно поместить куда угодно на странице. Даже в head.
+
+// async - независивые, загружаются сразу после прочтения на странице. Независит от других скриптов и DOM структуры.
 
 
-//! 31 - События и их обработчики
 //! 31 - События и их обработчики
 //! 31 - События и их обработчики
